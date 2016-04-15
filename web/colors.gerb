@@ -1,0 +1,11 @@
+<html>
+    <% if random < 33333 { %>
+    <body bgcolor="red">
+    <% } else if random < 66666 { %>
+    <body bgcolor="navy">
+    <% } else { %>
+    <body bgcolor="green">
+    <% } %>
+        <h1><%= random %></h1>
+    </body>
+</html>

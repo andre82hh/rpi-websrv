@@ -19,5 +19,5 @@ func main() {
 	}
 
 	conf := config.NewConfigFromFile(os.Args[1])
-	server.Run(conf.Port, conf.StaticPagesDirectory)
+	server.Run(conf.Port, conf.ContentDirectory)
 }

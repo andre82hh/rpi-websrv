@@ -6,8 +6,8 @@ import (
 )
 
 type Config struct {
-	Port                 int
-	StaticPagesDirectory string
+	Port             int
+	ContentDirectory string
 }
 
 func NewConfigFromFile(configFile string) *Config {

@@ -2,3 +2,5 @@ bin
 pkg
 *.un~
 *.swp
+src/github.com/karlseguin/
+src/gopkg.in/
