@@ -34,3 +34,8 @@ wget -O - http://pi:7777/health
 ```
 wget -q -O - http://pi:7777/web/colors
 ```
+
+### page printing just the host name
+```
+wget -q -O - http://pi:7777/web/hostname
+```
