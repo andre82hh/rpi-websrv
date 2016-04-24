@@ -1,11 +1,12 @@
 <html>
-    <% if random < 33333 { %>
+    <% if m, err := regexp.MatchString("[^-]*-[a-k].*", hostname); err == nil && m == true { %>
     <body bgcolor="red">
-    <% } else if random < 66666 { %>
-    <body bgcolor="navy">
+    <% } else if m, err = regexp.MatchString("[^-]*-[l-z].*", hostname); err == nil && m == true { %>
+    <body bgcolor="lightblue">
     <% } else { %>
-    <body bgcolor="green">
+    <body bgcolor="lightgreen">
     <% } %>
-        <h1><%= random %></h1>
+    <h1>Welcome from host:</h1>
+    <h2><%= hostname %></h2>
     </body>
 </html>

@@ -4,11 +4,13 @@ import (
 	"bytes"
 	"fmt"
 	"github.com/karlseguin/gerb"
+	"github.com/karlseguin/gerb/core"
 	"log"
 	"math/rand"
 	"net/http"
 	"os"
 	"path"
+	"regexp"
 	"strings"
 )
 
@@ -49,8 +51,14 @@ func (s WebServer) HealthCheckHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, fmt.Sprintf("Random: %d", random))
 }
 
+func (s WebServer) registerAliases() {
+	core.RegisterAliases("regexp",
+		"MatchString", regexp.MatchString)
+}
+
 func (s *WebServer) Run(port int, contentDirectory string) {
 	s.ContentDirectory = contentDirectory
+	s.registerAliases()
 	http.HandleFunc("/web/", s.webHandler)
 	http.HandleFunc("/health", s.HealthCheckHandler)
 	log.Printf("Starting web server (content dir: %v) using port: %v", contentDirectory, port)
