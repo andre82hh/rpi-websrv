@@ -30,7 +30,7 @@ $GOPATH/bin/rpi-websrv config.json
 wget -O - http://pi:7777/health
 ```
 
-### page changing bg color based on random number
+### page changing bg color based on hostname 
 ```
 wget -q -O - http://pi:7777/web/colors
 ```
