@@ -1,4 +1,4 @@
 {
-    "Port": 7890,
+    "Port": 7777,
     "ContentDirectory": "web"
 }
