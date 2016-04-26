@@ -1,7 +1,7 @@
 <html>
-    <% if m, err := regexp.MatchString("[^-]*-[a-k].*", hostname); err == nil && m == true { %>
+    <% if m, err := regexp.MatchString("[^-]*-[01234a-k].*", hostname); err == nil && m == true { %>
     <body bgcolor="red">
-    <% } else if m, err = regexp.MatchString("[^-]*-[l-z].*", hostname); err == nil && m == true { %>
+    <% } else if m, err = regexp.MatchString("[^-]*-[56789l-z].*", hostname); err == nil && m == true { %>
     <body bgcolor="lightblue">
     <% } else { %>
     <body bgcolor="lightgreen">
