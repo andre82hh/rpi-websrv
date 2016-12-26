@@ -1,0 +1,8 @@
+language: go
+
+go:
+  - 1.7.x
+
+script:
+  - go get github.com/karlseguin/gerb
+  - go install github.com/ci2rpi/rpi-websrv
